@@ -57,7 +57,8 @@ person=user, ad=adress, em=email, des=desc, rea=reason, file=filename)
 return redirect("/")
 ```
 
-Validations for username, password, etc.
+Validations for username, password, etc:
+
 ![Validation gif](Screenshots/validation.gif)
 ## Pictures
 - Login and Adopt page
