@@ -65,7 +65,7 @@ Validations for username, password, etc:
 
 | Login | Adopt |
 | :---: | :---: |
-| <img src="Screenshots/img1.png" width="400">  | <img src="Screenhots/img3adopt.png" width="400">|
+| <img src="Screenshots/img1.png" width="400">  | <img src="Screenshots/img3adopt.png" width="400">|
 
 - Homepage and Responsive show case
 
