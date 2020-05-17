@@ -57,29 +57,32 @@ person=user, ad=adress, em=email, des=desc, rea=reason, file=filename)
 return redirect("/")
 ```
 
-Validations for username, password, etc.
+Validations for username, password, etc:
+
 ![Validation gif](Screenshots/validation.gif)
 ## Pictures
 - Login and Adopt page
 
 | Login | Adopt |
 | :---: | :---: |
-| <img src="Screenshots/img1.png" width="100">  | <img src="Screenhots/img3adopt.png" width="100">|
+| <img src="Screenshots/img1.png" width="400">  | <img src="Screenshots/img3adopt.png" width="400">|
 
 - Homepage and Responsive show case
 
 | Homepage | Responsive Web |
 | :---: | :---: | 
-| <img src="Screenshots/img4home.png" width="100"> | <img src="Screenshots/img6responsive.png" width = "100">
+| <img src="Screenshots/img4home.png" width="400"> | <img src="Screenshots/responsive.gif" width = "400">
 
 
 ## demonstration on youtube
 For the CS50 final projec you have to make a video showning your project
-[My Final Project presention ](https://www.youtube.com/watch?v=YAXmRfrcOVc)
+[My Final Project presentation](https://www.youtube.com/watch?v=YAXmRfrcOVc)
 
 ## Documentation
 https://flask.palletsprojects.com/en/1.1.x/
+
 https://flask-sqlalchemy.palletsprojects.com/en/2.x/
+
 https://flask-wtf.readthedocs.io/en/stable/form.html#module-flask_wtf.file
 
 ## About CS50
@@ -92,4 +95,4 @@ Thank you for all CS50.
 - Where I get CS50 course?
 https://cs50.harvard.edu/x/2020/
 
-[linkedin Felipe Nieto](https://www.linkedin.com/in/felipe-antonio-nieto-curcio-9b865116a/)
+[LinkedIn Felipe Nieto](https://www.linkedin.com/in/felipe-antonio-nieto-curcio-9b865116a/)
