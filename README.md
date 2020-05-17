@@ -76,7 +76,7 @@ Validations for username, password, etc:
 
 ## demonstration on youtube
 For the CS50 final projec you have to make a video showning your project
-[My Final Project presention ](https://www.youtube.com/watch?v=YAXmRfrcOVc)
+[My Final Project presentation](https://www.youtube.com/watch?v=YAXmRfrcOVc)
 
 ## Documentation
 https://flask.palletsprojects.com/en/1.1.x/
