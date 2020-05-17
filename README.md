@@ -71,7 +71,7 @@ Validations for username, password, etc:
 
 | Homepage | Responsive Web |
 | :---: | :---: | 
-| <img src="Screenshots/img4home.png" width="400"> | <img src="Screenshots/img6responsive.png" width = "400">
+| <img src="Screenshots/img4home.png" width="400"> | <img src="Screenshots/responsive.gif" width = "400">
 
 
 ## demonstration on youtube
@@ -95,4 +95,4 @@ Thank you for all CS50.
 - Where I get CS50 course?
 https://cs50.harvard.edu/x/2020/
 
-[linkedin Felipe Nieto](https://www.linkedin.com/in/felipe-antonio-nieto-curcio-9b865116a/)
+[LinkedIn Felipe Nieto](https://www.linkedin.com/in/felipe-antonio-nieto-curcio-9b865116a/)
