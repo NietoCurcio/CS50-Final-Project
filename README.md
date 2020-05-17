@@ -74,8 +74,8 @@ Validations for username, password, etc:
 | <img src="Screenshots/img4home.png" width="400"> | <img src="Screenshots/responsive.gif" width = "400">
 
 
-## demonstration on youtube
-For the CS50 final projec you have to make a video showning your project
+## Demonstration on youtube
+For the CS50 final project you have to make a video showning your project,
 [My Final Project presentation](https://www.youtube.com/watch?v=YAXmRfrcOVc)
 
 ## Documentation
