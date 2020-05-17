@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+<section class = "container">
+    <div class="records">
+        <h2>Hello {{ name }}, My donations:</h2>
+    </div>
+
+    {% for row in rowsMy %}
+    <div class="row">
+        <div class="col-sm-3 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Description:</h4>
+            <p>{{ row['description'] }}</p>
+        </div>
+        <div class="col-sm-3 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Reason:</h4>
+            <p>{{ row['description'] }}</p>
+        </div>
+        <div class="col-sm-3 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Pet Photo:</h4>
+            <p><img class="descimage" src="static/images/users/{{ row['filename'] }}"alt="petphoto"></p>
+        </div>
+        <form action="/delete/{{ row['filename'] }}" method="POST">
+            <button type="submit" class="btn btn-primary" style="margin: 40px; max-height: 40px;">Delete</button>
+        </form>
+    </div>
+    <div class="alert alert-info"></div>
+    {% endfor %}
+
+    {% if not rowsMy %}
+        <div class="alert alert-info listVoid" style="text-align: center;">
+            Here is where you see your donations registreds
+        </div>
+    {% endif %}
+
+    <div class="records">
+        <h2>Selected donations (to adopt): </h2>
+    </div>
+
+    {% for row in rowsSelected %}
+    <div class="row">
+        <div class="col-sm-2 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Adress:</h4>
+            <p>{{ row['adress'] }}</p>
+        </div>
+        <div class="col-sm-2 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Contact:</h4>
+            <p>{{ row['email'] }}</p>
+        </div>
+        <div class="col-sm-2 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Description:</h4>
+            <p>{{ row['description'] }}</p>
+        </div>
+        <div class="col-sm-2 border rounded" style="padding: 5px; margin: 5px; background-color: rgba(226, 226, 226, 0.5);">
+            <h4>Reason:</h4>
+            <p>{{ row['reason'] }}</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>Pet Photo:</h4>
+            <p><img class="descimage"src="static/images/users/{{ row['filename'] }}"></p>
+        </div>
+    </div>
+    <div class="alert alert-info"></div>
+    {% endfor %}
+    
+    {% if not rowsSelected %}
+        <div class="alert alert-info listVoid" style="text-align: center;">
+            Here you look donations of the other people that you have been selected
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

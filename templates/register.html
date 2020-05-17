@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+<section class="container">
+    <h2 style="padding: 5px;">To give love and receive love</h2>
+    <div>
+        <img class = "border rounded login" src="/static/images/dogcat.jpg" alt="Dogs&Cats" id = "loginimage">
+        <form action="/register" method="POST" class="login" style="position: relative; top: 40px">
+            <h3>Register</h3>
+            <input type = "text" id = "user" name = "username" class="form-control" placeholder="Username">
+            <input type="email" id ="email" name = "email" class="form-control" placeholder="Email">
+            <input type = "password" id = "pass" name = "password" class = "form-control" placeholder="Password">
+            <input type = "password" id = "passConf" name = "passConf" class = "form-control" placeholder="Confirm Password">
+            <button id = "submitt" type = "submit" class = "btn btn-primary" disabled>Register</button>
+        </form>
+    </div>
+</section>
+<script>
+    document.getElementById('user').onkeyup = function Keyup() {
+        if (document.getElementById('user').value === "" || 
+        document.getElementById('email').value === "" ||
+        document.getElementById('pass').value === "" ||
+        document.getElementById('passConf').value === "")
+        {
+            document.getElementById('submitt').disabled = true
+        }
+        else {
+            document.getElementById('submitt').disabled = false
+        }
+    };
+
+    document.getElementById('email').onkeyup = function Keyup() {
+        if (document.getElementById('user').value === "" || 
+        document.getElementById('email').value === "" ||
+        document.getElementById('pass').value === "" ||
+        document.getElementById('passConf').value === "")
+        {
+            document.getElementById('submitt').disabled = true
+        }
+        else {
+            document.getElementById('submitt').disabled = false
+        }
+    };
+
+    document.getElementById('pass').onkeyup = function Keyup() {
+        if (document.getElementById('user').value === "" || 
+        document.getElementById('email').value === "" ||
+        document.getElementById('pass').value === "" ||
+        document.getElementById('passConf').value === "")
+        {
+            document.getElementById('submitt').disabled = true
+        }
+        else {
+            document.getElementById('submitt').disabled = false
+        }
+    };
+
+    document.getElementById('passConf').onkeyup = function Keyup() {
+        if (document.getElementById('user').value === "" || 
+        document.getElementById('email').value === "" ||
+        document.getElementById('pass').value === "" ||
+        document.getElementById('passConf').value === "")
+        {
+            document.getElementById('submitt').disabled = true
+        }
+        else {
+            document.getElementById('submitt').disabled = false
+        }
+    };
+</script>
+
+{% endblock %}

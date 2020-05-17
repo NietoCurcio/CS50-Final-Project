@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<section class="container">
+    <h2 style="text-align: center; margin-top: 10px;">Adopt a friend, he need your love.</h2>
+    <div class="alert alert-info" style="text-align: center;">
+        {% if not allrows or allrows[0]['person_id'] == user and len == 1 %}
+        Here is shown all donations.
+        {% endif %}
+    </div>
+    {% for row in allrows %}
+    {% if row['person_id'] != user %}
+    <div class="row">
+        <div class="col-sm-2">
+            <h4>Adress</h4>
+            <p>{{ row['adress'] }}</p>
+        </div>
+        <div class="col-sm-2">
+            <h4>Contact:</h4>
+            <p>{{ row['email'] }}</p>
+        </div>
+        <div class="col-sm-2">
+            <h4>Description</h4>
+            <p>{{ row['description'] }}</p>
+        </div>
+        <div class="col-sm-2">
+            <h4>Reason:</h4>
+            <p>{{ row['reason'] }}</p>
+        </div>
+        <div class="col-sm-2">
+            <h4>Pet photo:</h4>
+            <p><img class="descimage" src="static/images/users/{{ row['filename'] }}"></p>
+        </div>
+        <div class="col-sm-3">
+            <form action="/rec/{{ row['id_case'] }}" method="POST">
+                <button type="submit" class="btn btn-primary" style="margin: 5px;">Adopt</button>
+            </form>
+        </div>
+    </div>
+    <div style="border-bottom:  #3D348B 1px solid; opacity: 0.5; margin: 10px;"></div>
+    {% endif %}
+    {% endfor %}
+</section>
+
+{% endblock %}

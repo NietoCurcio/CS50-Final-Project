@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+<section class="container">
+    <h2 style="padding: 5px";>To give love and receive love</h2>
+    <div>
+        <img class = "border rounded login" src="/static/images/dogcat.jpg" alt="Dogs&Cats">
+        <form action="/login" method="POST" class="login" style="position: relative; top: 40px">
+            <h3>Login</h3>
+            <input type = "text" id = "user" name = "username" class="form-control" placeholder="Username">
+            <input type = "password" id = "pass" name = "password" class = "form-control" placeholder="Password">
+            <button id = "submitt" type = "submit" class = "btn btn-primary" disabled>Log In</button>
+        </form>
+    </div>
+</section>
+    <script>
+        document.getElementById('user').onkeyup = function Keyup() {
+            if (document.getElementById('user').value === "" || 
+            document.getElementById('pass1').value === "")
+            {
+                document.getElementById('submitt').disabled = true
+            }
+            else {
+                document.getElementById('submitt').disabled = false
+            }
+        };
+
+        document.getElementById('pass').onkeyup = function Keyup() {
+            if (document.getElementById('user').value === "" || 
+            document.getElementById('pass').value === "")
+            {
+                document.getElementById('submitt').disabled = true
+            }
+            else {
+                document.getElementById('submitt').disabled = false
+            }
+        };
+    </script>
+{% endblock %}

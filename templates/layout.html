@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Donations of Dogs and cats">
+        <meta name="keywords" content="dogs, cats, donations, adopts, adopt">
+        <meta name="author" content="Felipe Nieto">
+        <title> Dogs&Cats
+            {% block title %}
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/styles.css">
+             <!-- https://flask.palletsprojects.com/en/1.1.x/tutorial/static/  -->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <a href="/"><h1>Dogs & Cats</h1></a>
+                </div>
+                <nav>
+                    {% if session.user_id %}
+                    <ul>
+                        <li><a href="/MyDonation">Register donation</a></li>
+                        <li><a href="/adopt">Adopt</a></li>
+                    </ul>
+                    <ul id="logout">
+                        <li><a href="/logout">Log Out</a></li>
+                    </ul>
+                    {% else %}
+                    <ul>
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="/login">Log In</a></li>
+                    </ul>
+                    {% endif %}
+                </nav>
+            </div>
+        </header>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="alert alert-info" style="text-align: center;" role="alert">
+                {% for message in messages %}
+                <li style="display: inline;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+        
+        {% block body %}
+        {% endblock %}
+        <footer>
+            <p>Dogs&Cats By Felipe Nieto, THIS IS CS50 THANK YOU, Copyright &copy; 2020</p>
+        </footer>
+    </body>
+</html>

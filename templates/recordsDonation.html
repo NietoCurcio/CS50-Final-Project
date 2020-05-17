@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mydonation
+{% endblock %}
+{% block body %}
+<section class="container">
+    <div class="reg">
+        <form action="/MyDonation" method="POST" class="login" enctype="multipart/form-data">
+            <input type="text" placeholder="Adress" class="form-control" name="adress" id='ad'>
+            <input type="text" placeholder="Description" class="form-control" name="description" id="de">
+            <input type="text" placeholder="Reason" class="form-control" name="reason" id="re">
+             <!-- form.csrf_token  -->
+            <div class="border rounded font-weight-bold" style="padding:5px;margin-top: 10px;margin-bottom: 10px;width: 250px; background-color: gainsboro;">
+                Select an image of your pet (not required):
+            </div>
+            {{ form.image (class="btn btn-primary") }}
+            <div></div>
+            <button id='sub' type="submit" class="btn btn-primary reg" style = "padding-top: 10px; margin-top: 5%;" disabled>Register</button>
+        </form>
+    </div>
+</section>
+<script>
+    document.getElementById('ad').onkeyup = function Keyup() {
+        if (document.getElementById('ad').value === "" || 
+        document.getElementById('de').value === "" ||
+        document.getElementById('re').value === "")
+        {
+            document.getElementById('sub').disabled = true
+        }
+        else {
+            document.getElementById('sub').disabled = false
+        }
+    };
+
+    document.getElementById('de').onkeyup = function Keyup() {
+        if (document.getElementById('ad').value === "" || 
+        document.getElementById('de').value === "" ||
+        document.getElementById('re').value === "")
+        {
+            document.getElementById('sub').disabled = true
+        }
+        else {
+            document.getElementById('sub').disabled = false
+        }
+    };
+
+    document.getElementById('re').onkeyup = function Keyup() {
+        if (document.getElementById('ad').value === "" || 
+        document.getElementById('de').value === "" ||
+        document.getElementById('re').value === "")
+        {
+            document.getElementById('sub').disabled = true
+        }
+        else {
+            document.getElementById('sub').disabled = false
+        }
+    };
+</script>
+{% endblock %}

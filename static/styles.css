@@ -1,0 +1,104 @@
+body {
+    background-color: #f6f6f6;
+}
+/* Global */
+.container {
+    width: 80%;
+    overflow: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+} 
+
+/* header */
+header {
+    margin: 0;
+    padding: 0;
+    background-color: #7F7FFF;
+    color: #FFB400;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #3D348B 3px solid;
+}
+
+header a {
+    color: #FFB400;
+    text-decoration:none !important;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 15px 0 15px;
+}
+
+header #branding {
+    float: left;           
+}
+
+header #branding h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+header nav ul{
+    float: left;
+    margin-top: 12px;
+}
+header nav #logout {
+    float:right;
+    margin-top: 10px;
+}
+/* login*/
+
+ .login {
+    float: left;
+    min-height: 350px;
+    /* min-height por responsive website */
+    margin: 10px;
+} 
+/* forms */
+.form-control {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #eaeaea;
+    text-align: center;
+}
+/* home page */
+.records {
+    margin-top: 40px;
+}
+table{
+    min-width: 600px;
+    font-size: 18px;
+}
+table th {
+    padding: 5px;
+}
+tr:nth-child(even) {
+      background-color: #C0C0C0;
+}
+
+.descimage {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+/* Registres donations */
+.reg {
+    margin-top: 10%;
+    min-width: 100px;
+}
